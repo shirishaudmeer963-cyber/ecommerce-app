@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6f6f1">
+    <title>Create an account | Shirisha Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="wordmark" href="index.html" aria-label="Shirisha Store home">shirisha<span>.</span></a>
+        <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Shop</a><a href="index.html#products">All products</a></nav>
+        <div class="header-actions"><a class="account-link" href="login.html" aria-current="page">Account</a><a class="cart-link" href="cart.html" aria-label="Shopping bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-label">Bag</span><span class="cart-badge" data-cart-count>0</span></a></div>
+    </header>
+    <main class="account-page">
+        <div class="account-panel">
+            <p class="eyebrow">MAKE YOURSELF AT HOME</p>
+            <h1>Create account<span class="heading-period">.</span></h1>
+            <p class="account-intro">Account creation is not connected in this storefront demo. Your credentials will not be stored or sent.</p>
+            <form class="account-form" data-account-form data-register-form>
+                <label class="form-field">Full name<input type="text" name="name" autocomplete="name" required minlength="2" placeholder="Your name"></label>
+                <label class="form-field">Email address<input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
+                <label class="form-field">Password<input type="password" name="password" autocomplete="new-password" data-password required minlength="8" placeholder="At least 8 characters"></label>
+                <label class="form-field">Confirm password<input type="password" name="confirmPassword" autocomplete="new-password" data-confirm-password required minlength="8" placeholder="Enter it once more"></label>
+                <button class="button button-dark" type="submit">Create account</button>
+                <p class="account-notice" data-account-notice hidden role="status">Authentication is not connected. No account was created and no credentials were stored.</p>
+            </form>
+            <p class="account-switch">Already have an account? <a href="login.html">Sign in</a></p>
+            <a class="account-back" href="index.html">← Back to the collection</a>
+        </div>
+        <div class="account-aside"><span>SHIRISHA / ACCOUNT</span><p>Good things<br>are worth<br><em>coming back to.</em></p><div>02 — 02</div></div>
+    </main>
+    <footer class="site-footer"><a class="wordmark" href="index.html">shirisha<span>.</span></a><p>Useful things, chosen with care.</p><span>© 2026 Shirisha Store</span></footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
