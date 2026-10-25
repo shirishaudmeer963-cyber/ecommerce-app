@@ -15,6 +15,7 @@ Then open `http://localhost:8000`.
 ## Included demo flows
 
 - Product search and price sorting
+- Category filters that combine with search and sorting
 - Persistent shopping bag using browser `localStorage`
 - Quantity controls, item removal, subtotal, shipping, and total calculations
 - Delivery form with native validation and an order confirmation reference

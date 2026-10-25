@@ -215,6 +215,9 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .search-field input::placeholder { color: #858b84; }
 .sort-field { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 11px; }
 .sort-field select { max-width: 180px; padding: 9px 24px 9px 8px; border: 1px solid var(--line); border-radius: 2px; background: transparent; color: var(--ink); font-size: 11px; }
+.category-tabs { min-height: 48px; display: flex; align-items: stretch; gap: 25px; overflow-x: auto; border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+.category-tabs button { flex: 0 0 auto; padding: 0 2px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); cursor: pointer; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.category-tabs button:hover, .category-tabs button.active { border-bottom-color: var(--green); color: var(--green-dark); }
 .product-grid { padding-top: 27px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .product-card { min-width: 0; background: var(--white); border: 1px solid #e8e9e3; animation: rise-in .45s ease both; }
 .product-card:nth-child(2) { animation-delay: .05s; }
@@ -366,6 +369,8 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
     .search-field input { min-width: 0; font-size: 10px; }
     .sort-field { gap: 5px; font-size: 9px; }
     .sort-field select { max-width: 135px; padding: 8px 3px; font-size: 9px; }
+    .category-tabs { min-height: 44px; gap: 20px; }
+    .category-tabs button { font-size: 10px; }
     .product-grid { gap: 10px; padding-top: 17px; }
     .product-image-wrap { height: 155px; }
     .product-category { top: 7px; left: 7px; padding: 5px 6px; font-size: 8px; }

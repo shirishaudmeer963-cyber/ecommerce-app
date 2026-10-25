@@ -90,10 +90,13 @@ function renderProducts() {
 
     const search = document.querySelector("[data-product-search]");
     const sort = document.querySelector("[data-product-sort]");
+    const categoryFilters = document.querySelector("[data-category-filters]");
+    let selectedCategory = "all";
 
     function drawProducts() {
         const query = search.value.trim().toLowerCase();
         const products = PRODUCTS.filter((product) =>
+            (selectedCategory === "all" || product.category === selectedCategory) &&
             `${product.name} ${product.description} ${product.category}`
                 .toLowerCase()
                 .includes(query)
@@ -126,6 +129,17 @@ function renderProducts() {
 
     search.addEventListener("input", drawProducts);
     sort.addEventListener("change", drawProducts);
+    categoryFilters.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-category]");
+        if (!button) return;
+        selectedCategory = button.dataset.category;
+        categoryFilters.querySelectorAll("[data-category]").forEach((filter) => {
+            const isSelected = filter === button;
+            filter.classList.toggle("active", isSelected);
+            filter.setAttribute("aria-pressed", String(isSelected));
+        });
+        drawProducts();
+    });
     grid.addEventListener("click", (event) => {
         const button = event.target.closest("[data-add-to-cart]");
         if (!button) return;
